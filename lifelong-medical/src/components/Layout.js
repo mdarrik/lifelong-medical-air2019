@@ -44,7 +44,7 @@ For Footer:
 }]
 */
 
-const Layout = props => {
+const Layout = ({ title, description, lang, meta, children }) => {
   const phoneNumber = (
     <span className="headerText">
       <img src={phoneIcon} alt="phone number" />
@@ -85,15 +85,16 @@ const Layout = props => {
   });
 
   return (
-    <div>
+    <>
+      <seo title={title} lang={lang} meta={meta} description={description} />
       <nav className="header">
         {phoneNumber}
         {primaryHeader}
       </nav>
       <HeaderNavBar />
-      <div className="pageContent">{props.children}</div>
+      <div className="pageContent">{children}</div>
       <Footer />
-    </div>
+    </>
   );
 };
 
