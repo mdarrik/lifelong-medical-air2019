@@ -20,6 +20,6 @@
     },
     "dependencies": {
         "gatsby-source-graphql": "^2.1.21",
-        "gatsby-source-wordpress": "^3.1.43"
+        "gatsby-source-wordpress": "^4.0.8"
     }
 }
